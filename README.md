@@ -1,6 +1,6 @@
 # Take charge of your Tiktok timeline with one click
 
-![alt text](screenshot.png)
+![alt text](screenshot1.png)
 
 Link : https://chromewebstore.google.com/detail/tiktokblockout2024/bimhigeggaekhifnmhhmbjbeahooolig?hl=en-GB
 
