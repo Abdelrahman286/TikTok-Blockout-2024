@@ -17,9 +17,9 @@ function fetchUserList() {
   fetch(url)
     .then((response) => response.json())
     .then((users) => {
-      _el("textarea").textContent = "";
+      _el("textarea").value = "";
       users.forEach((user) => {
-        _el("textarea").textContent += `${user} \n`;
+        _el("textarea").value += `${user} \n`;
       });
     })
     .catch((error) => console.error("Failed to fetch user list", error));
