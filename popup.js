@@ -17,6 +17,7 @@ function fetchUserList() {
   fetch(url)
     .then((response) => response.json())
     .then((users) => {
+      _el("textarea").textContent = "";
       users.forEach((user) => {
         _el("textarea").textContent += `${user} \n`;
       });

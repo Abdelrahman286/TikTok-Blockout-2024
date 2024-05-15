@@ -2,7 +2,8 @@ window.onload = () => {
   try {
     // Simulate mouse hover
     const hoverButton = document.querySelector('div[data-e2e="user-more"]');
-    hoverButton.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
+
+    hoverButton?.dispatchEvent(new MouseEvent("mouseover", { bubbles: true }));
 
     // Wait for the menu to appear
     setTimeout(() => {
@@ -26,7 +27,7 @@ window.onload = () => {
               location.reload();
             }, 1000); // 1 second delay before reloading the page
           } else {
-            console.error("Confirmation block button not found");
+            console.log("Confirmation block button not found");
           }
         }, 500); // Adjust this timeout based on how quickly the modal appears
       } else {
@@ -34,6 +35,6 @@ window.onload = () => {
       }
     }, 500); // Adjust timeout as needed based on how quickly the menu appears
   } catch (error) {
-    console.error("Error in handling the block action:", error);
+    console.log("Error in handling the block action:", error);
   }
 };
