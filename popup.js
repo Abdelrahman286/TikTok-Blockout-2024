@@ -4,26 +4,12 @@ document.getElementById("startBlocking").addEventListener("click", () => {
   chrome.runtime.sendMessage({ action: "startBlocking", usersList });
 });
 
-_el("#load-btn").addEventListener("click", () => {
-  fetchUserList();
-});
+
 
 function _el(selector) {
   return document.querySelector(selector);
 }
 
-function fetchUserList() {
-  const url = chrome.runtime.getURL("blockList.json"); // Adjust if fetching from an external URL
-  fetch(url)
-    .then((response) => response.json())
-    .then((users) => {
-      _el("textarea").value = "";
-      users.forEach((user) => {
-        _el("textarea").value += `${user} \n`;
-      });
-    })
-    .catch((error) => console.error("Failed to fetch user list", error));
-}
 function isBlank(str) {
   return !str || /^\s*$/.test(str);
 }
